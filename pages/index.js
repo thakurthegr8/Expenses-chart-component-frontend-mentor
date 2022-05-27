@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon-32x32.png"/>
       </Head>
       <div className="card-container">
-        <div className="orange-card ">
+        <div className="orange-card">
           <div className="flex flex-col">
             <span className="text-sm">My balance</span>
             <span className="text-2xl font-semibold">$921.48</span>
