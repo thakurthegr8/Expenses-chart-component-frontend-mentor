@@ -1,16 +1,40 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
 
 * {
-  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+.main{
+  @apply bg-accent-neutral-cream h-screen flex flex-col ;
+}
+.card-container{
+  @apply flex flex-col mt-16 space-y-4 max-w-md mx-auto container items-center justify-center h-[75%];
+}
+.bar-details {
+  @apply flex flex-col text-xs space-y-2 w-full relative transition;
+}
+.stat-bar {
+  animation:2000ms animateScaleY ease-in-out;
+  transform-origin:bottom;
+  @apply block bg-accent-primary-soft-red rounded hover:bg-accent-primary-cyan flex-grow transition-all;
+}
+.stat-amount {
+  font-size: 0.625rem;
+  @apply bg-accent-neutral-dark-brown p-1 rounded text-white  hidden absolute transition -top-6;
+}
+.stat-day {
+}
+
+.bar-details:hover > .stat-amount {
+  display: block;
+}
+
+@keyframes animateScaleY {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
 }
