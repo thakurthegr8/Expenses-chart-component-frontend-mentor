@@ -6,7 +6,7 @@ import { data } from "../store/data";
 export default function Home() {
   return (
     <main className="main">
-      <Head>
+      <Head >
         <title>Expenses Chart Component | Frontend Mentor</title>
         <link
           href={`https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=IBM+Plex+Sans:wght@300;600;700&family=Nunito:wght@800&display=swap`}
@@ -14,14 +14,14 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon-32x32.png"/>
       </Head>
-      <div className="card-container">
+      <div className="card-container scale-75">
         <div className="flex justify-between items-center w-5/6 bg-accent-primary-soft-red text-white p-6 rounded-xl">
           <div className="flex flex-col">
             <span className="text-sm">My balance</span>
             <span className="text-2xl font-semibold">$921.48</span>
           </div>
           <div className="flex justify-center items-center">
-            <Image src="/logo.svg" width={72} height={48} />
+            <Image src="/logo.svg" width={72} height={48} alt="image"/>
           </div>
         </div>
         <div className="bg-white rounded-xl  w-5/6 p-6">
